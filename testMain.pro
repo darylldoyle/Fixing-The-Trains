@@ -6,22 +6,21 @@
 
 QT       += core gui
 
-TARGET = testMain
+ICON = icon.icns
+
+TARGET = "Fixing The Trains"
 TEMPLATE = app
 
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    trainwindow.cpp \
-    nettrainwindow.cpp
+    trainwindow.cpp
 
 HEADERS  += mainwindow.h \
-    trainwindow.h \
-    nettrainwindow.h
+    trainwindow.h
 
 FORMS    += mainwindow.ui \
-    trainwindow.ui \
-    nettrainwindow.ui
+    trainwindow.ui
 
 unix|win32: LIBS += -lfann
 

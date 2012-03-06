@@ -2,7 +2,6 @@
 #define TRAINWINDOW_H
 
 #include <QMainWindow>
-#include <functions.h>
 
 namespace Ui {
 class TrainWindow;
