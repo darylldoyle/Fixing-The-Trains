@@ -35,7 +35,7 @@ int main()
 			exit(0);
 		else if(strcmp ( usr_input, "train" ) == 0 )
 			// train(input, output, hidden, max_epochs);
-			train(6,4,3,3000);
+			train(6,4,5,20000);
 		else if(strcmp ( usr_input, "test" ) == 0 )
 			test();
 		else if(strcmp ( usr_input, "params" ) == 0 )

@@ -12,7 +12,7 @@ int train(const unsigned int num_input, const unsigned int num_output, const uns
 	// Set layers. 3 is one layer hidden
 	const unsigned int num_layers = 3;
 	// Desired error
-	const float desired_error = (const float) 0.00;
+	const float desired_error = (const float) 0.002;
 	// Epochs between reports
 	const unsigned int epochs_between_reports = 100;
 	struct fann *ann;
@@ -24,13 +24,13 @@ int train(const unsigned int num_input, const unsigned int num_output, const uns
 	printf("Fixing The Trains - Train Network.\n\n");
 	ann = fann_create_standard(num_layers, num_input, num_neurons_hidden, num_output);
 
-	data = fann_read_train_from_file("train_test.data");
+	data = fann_read_train_from_file("train_test.old.data");
 
 	fann_set_activation_steepness_hidden(ann, 1);
 	fann_set_activation_steepness_output(ann, 1);
 
-	fann_set_activation_function_hidden(ann, FANN_SIGMOID);
-	fann_set_activation_function_output(ann, FANN_SIGMOID);
+	fann_set_activation_function_hidden(ann, FANN_SIGMOID_SYMMETRIC);
+	fann_set_activation_function_output(ann, FANN_SIGMOID_SYMMETRIC);
 
 	fann_set_train_stop_function(ann, FANN_STOPFUNC_BIT);
 	fann_set_bit_fail_limit(ann, 0.01f);
