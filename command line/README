@@ -1,3 +1,0 @@
-compile using: gcc -l fann -o FTT main.c
-
-Must have the fann library installed or linked at compile time!
