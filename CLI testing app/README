@@ -1,0 +1,3 @@
+compile using: gcc -l fann -o ftt-cli main.c
+
+Must have the fann library installed or linked at compile time!
